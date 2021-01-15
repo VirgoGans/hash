@@ -1,13 +1,29 @@
 #python 3.7.1
-
-
 from __future__ import unicode_literals
 import hashlib
+import time
+import os
 import hmac
+
+a ='\033[92m'
+b ='\033[91m'
+c ='\033[0m'
+
 from base64 import b16encode
 from base64 import b32encode
 from base64 import b64encode
 from binascii import hexlify
+os.system ('clear')
+print(a+'\t  ╔╗─╔╗╔═══╗╔═══╗╔╗─╔╗')
+print(a+'\t  ║║─║║║╔═╗║║╔═╗║║║─║║')
+print(a+'\t  ║╚═╝║║║─║║║╚══╗║╚═╝║')
+print(a+'\t  ║╔═╗║║╚═╝║╚══╗║║╔═╗║')
+print(a+'\t  ║║─║║║╔═╗║║╚═╝║║║─║║')
+print(a+'\t  ╚╝─╚╝╚╝─╚╝╚═══╝╚╝─╚╝')
+time.sleep(1)
+print(b+'\t  Decode:   Virgo')
+print('\t YouTube : Virgo Gans')
+time.sleep(1)
 def b16_encode(item):
     """base16 encode"""
     try:
@@ -75,6 +91,6 @@ def hmac_encode(item):
     key = "random_key_in_html_js_or_other_place_if_it_is_not_changed"
     item = md5_encode(item)
     return hmac.new(key.encode("utf-8"), item.encode("utf-8"), hashlib.md5).hexdigest()
-a=input('Enter Text:')
-print('\n sha1:',sha1_encode(a),'\n sha256:',sha256(a),'\n sha516:',sha516(a),'\n sha512_encode',sha512_encode(a))
-print('\n b32_encode:',b32_encode(a),'\n b64_encode:',b64_encode(a),'\n rsa_encode:',rsa_encode(a),'\n sha1_encode:',sha1_encode(a),'\n md516_encode:',md516_encode(a))
+a=input(a+'\n\nEnter Text:')
+print(a+'\n---------------------------------------\n sha1 =>\n',sha1_encode(a),'\n---------------------------------------\n\n sha256 => ',sha256(a),'\n---------------------------------------\n\n sha516 => ',sha516(a),'\n---------------------------------------\n\n sha512_encode => ',sha512_encode(a))
+print('\n---------------------------------------\n\n b32_encode => ',b32_encode(a),'\n---------------------------------------\n\n b64_encode => ',b64_encode(a),'\n---------------------------------------\n\n rsa_encode => ',rsa_encode(a),'\n---------------------------------------\n\n sha1_encode => ',sha1_encode(a),'\n---------------------------------------\n\n md516_encode => ',md516_encode(a),'\n---------------------------------------')
